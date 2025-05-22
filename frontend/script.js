@@ -11,7 +11,7 @@ document.getElementById('foodForm').addEventListener('submit', async (e) => {
   
   try {
     // Fetch nutrient data from backend
-    const response = await fetch(`https://glowing-eureka-56p954w5q66f7jrg-3000.app.github.dev/food/${food}`);
+const response = await fetch(`https://indian-calorie-calculator-backend.onrender.com/food/${food}`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
