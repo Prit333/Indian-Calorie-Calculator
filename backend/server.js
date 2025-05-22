@@ -13,11 +13,15 @@ app.use((req, res, next) => {
 });
 
 app.get('/food/:name', (req, res) => {
-  const food = foods.find(f => f.food === req.params.name);
+  console.log('Requested food:', req.params.name); // Debug log
+  const food = foods.find(f => {
+    console.log('Comparing:', f.food, req.params.name); // Debug log
+    return f.food.toLowerCase() === req.params.name.toLowerCase();
+  });
   if (food) {
     res.json(food);
   } else {
-    res.status(404).json({ error: 'Food not found' });
+    res.status(404).json({ error: 'Food not found', requested: req.params.name });
   }
 });
 

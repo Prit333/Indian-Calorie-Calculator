@@ -7,14 +7,25 @@
 <body>
   <h1>Indian Food Nutrient Tracker</h1>
   <form id="foodForm">
-    <select id="foodSelect">
-      <option value="Roti">Roti</option>
-      <option value="Dal">Dal</option>
-      <!-- Add more foods from database -->
-    </select>
-    <input type="number" id="portion" placeholder="Portion (e.g., 2 rotis)" min="1">
+    <input type="text" id="foodInput" list="foodList" placeholder="Type food name (e.g., Roti)" required>
+    <datalist id="foodList">
+      <!-- Populated dynamically -->
+    </datalist>
+    <input type="number" id="portion" placeholder="Portion (e.g., 2)" min="1" step="0.1">
     <button type="submit">Add Food</button>
   </form>
+  <h2>Add Custom Food</h2>
+  <form id="customFoodForm">
+    <input type="text" id="customFoodName" placeholder="Food Name" required>
+    <input type="number" id="customCalories" placeholder="Calories (kcal)" min="0" step="0.1" required>
+    <input type="number" id="customCarbs" placeholder="Carbs (g)" min="0" step="0.1" required>
+    <input type="number" id="customProtein" placeholder="Protein (g)" min="0" step="0.1" required>
+    <input type="number" id="customFat" placeholder="Fat (g)" min="0" step="0.1" required>
+    <input type="number" id="customIron" placeholder="Iron (mg)" min="0" step="0.1" required>
+    <input type="number" id="customCalcium" placeholder="Calcium (mg)" min="0" step="0.1" required>
+    <button type="submit">Add Custom Food</button>
+  </form>
+  <button id="clearLogs">Clear Logs</button>
   <table id="results">
     <thead>
       <tr>
@@ -26,11 +37,19 @@
         <th>Fat (g)</th>
         <th>Iron (mg)</th>
         <th>Calcium (mg)</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody id="foodList"></tbody>
   </table>
-  <h3>Total: <span id="totalCalories">0</span> kcal</h3>
+  <h3>Totals:
+    <span>Calories: <span id="totalCalories">0</span> kcal</span>,
+    <span>Carbs: <span id="totalCarbs">0</span> g</span>,
+    <span>Protein: <span id="totalProtein">0</span> g</span>,
+    <span>Fat: <span id="totalFat">0</span> g</span>,
+    <span>Iron: <span id="totalIron">0</span> mg</span>,
+    <span>Calcium: <span id="totalCalcium">0</span> mg</span>
+  </h3>
   <script src="script.js"></script>
 </body>
 </html>
