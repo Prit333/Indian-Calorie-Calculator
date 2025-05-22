@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indian Food Nutrient Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Indian Food Nutrient Tracker</h1>
+  <form id="foodForm">
+    <select id="foodSelect">
+      <option value="Roti">Roti</option>
+      <option value="Dal">Dal</option>
+      <!-- Add more foods from database -->
+    </select>
+    <input type="number" id="portion" placeholder="Portion (e.g., 2 rotis)" min="1">
+    <button type="submit">Add Food</button>
+  </form>
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Portion</th>
+        <th>Calories (kcal)</th>
+        <th>Carbs (g)</th>
+        <th>Protein (g)</th>
+        <th>Fat (g)</th>
+        <th>Iron (mg)</th>
+        <th>Calcium (mg)</th>
+      </tr>
+    </thead>
+    <tbody id="foodList"></tbody>
+  </table>
+  <h3>Total: <span id="totalCalories">0</span> kcal</h3>
+  <script src="script.js"></script>
+</body>
+</html>
