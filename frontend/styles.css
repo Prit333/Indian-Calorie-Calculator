@@ -1,71 +1,93 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f9;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 h1, h2 {
   color: #333;
 }
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+
 form {
-  margin: 20px 0;
-  padding: 15px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-input, button {
-  padding: 8px;
-  margin: 5px;
+
+input[type="text"],
+input[type="number"],
+button {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 16px;
 }
+
+input[type="text"],
+input[type="number"] {
+  flex: 1;
+  min-width: 150px;
+}
+
 button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #28a745;
+  color: #fff;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
+
 button:hover {
-  background-color: #45a049;
+  background-color: #218838;
 }
-#clearLogs {
-  background-color: #f44336;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
-#clearLogs:hover {
-  background-color: #d32f2f;
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
-.deleteBtn {
-  background-color: #f44336;
-  color: white;
+
+th {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-.deleteBtn:hover {
-  background-color: #d32f2f;
+
+.delete-btn:hover {
+  background-color: #c82333;
 }
-#customFoodForm input {
-  margin: 5px;
-  padding: 5px;
-  width: 120px;
+
+#clearLogs {
+  background-color: #007bff;
+  padding: 10px 20px;
+}
+
+#clearLogs:hover {
+  background-color: #0056b3;
 }
